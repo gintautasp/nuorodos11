@@ -4,7 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuorodų Saugykla</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- link rel="stylesheet" href="style.css" -->
+  <style>
+	section {
+		width: 100%;
+	}
+	input[type=text], select, button, div.trumpi_parinkimai {
+		width: 68%;
+		margin: 10px 12px;
+		padding: 4px 7px;
+		margin-top: 4px;
+	}
+	label {
+		display: block;
+		margin: 10px 12px;
+		margin-bottom: 4px;
+	}
+  </style>
 </head>
 <body>
   <header>
@@ -14,8 +30,21 @@
 
   <main>
     <section class="add-link">
+         <label>Nuorodos url</label>  
       <input type="text" id="url" placeholder="Įveskite nuorodą">
+	<label>Nuorodos pavadinimas</label>
       <input type="text" id="name" placeholder="Nuorodos pavadinimas">
+	<label>Žymos, atskirtos kableliu</label>
+       <input type="text" id="zymos" placeholder="Žymos, atskirtos kableliu"> 
+        <div class="trumpi_parinkimai">
+       <input type="checkbox" name="viesa"> - vieša žyma
+       </div>
+       <label>Nuorodos tipas</label>
+       <select name="tipas">
+		<option value="vaizdo_irasai">Vaizdo įrašai</option>
+		<option value="vaizdai">Vaizdai</option>
+		<option value="kiti">Kiti</option>		
+       </select>
       <button onclick="addLink()">Pridėti nuorodą</button>
     </section>
 
